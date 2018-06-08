@@ -29,10 +29,10 @@ namespace Ejercicio3_DFDaCSharp
             Console.ForegroundColor = ConsoleColor.Black;
             Console.Clear();
 
-            int opcion = 0;
-            string n = "", n2="";
-            bool esNumero = false, esNumero2=false;
-            long nro1 = 0, nro2 = 0;
+            int opcion = 0, c=0, d=0, j=0, k=0;
+            string n = "", n2="", n3="", n4="";
+            bool esNumero = false, esNumero2=false, c1=false, c2=false;
+            int nro1 = 0, nro2 = 0, i=0, m=0;
             long res = 0;
 
             while (opcion < 1 | opcion > 3)
@@ -81,23 +81,87 @@ namespace Ejercicio3_DFDaCSharp
                     {
                         case 1:
                             //multiplicación "normal"
+                            esNumero = false;
+                            while (esNumero == false || esNumero2 == false || c1==false|| c2==false )
+                            {
+                                Console.WriteLine("                                                                           ");
+                                Console.Write(" --------------- Establezca una tabla de multiplicar: ");
+                                n = Console.ReadLine();
+                                Console.WriteLine("                                                                           ");
+                                Console.Write(" --------------- Establezca otra tabla de multiplicar: ");                                
+                                n2 = Console.ReadLine();
+                                Console.WriteLine("                                                                           ");
+                                Console.Write(" --------------- Ingrese un indice de multiplicación: ");
+                                n3 = Console.ReadLine();
+                                Console.WriteLine("                                                                           ");
+                                Console.Write(" --------------- Ingrese otro indice de multiplicación: ");
+                                n4 = Console.ReadLine();
+                                Console.WriteLine("                                                                           ");
+                                esNumero = int.TryParse(n, out nro1);
+                                esNumero2 = int.TryParse(n2, out nro2);
+                                c1 = int.TryParse(n3, out c);
+                                c2 = int.TryParse(n4, out d);
+                            }
+
+                            if (nro1 <= nro2)
+                            {
+                                i = nro1;
+                                m = nro2;
+                            }else
+                            {
+                                i = nro2;
+                                m = nro1;
+                            }
+
+                            if(c <= d)
+                            {
+                                j = c;
+                                k = d;
+                            }else
+                            {
+                                j = d;
+                                k = c;
+                            }
+                            Console.BackgroundColor = ConsoleColor.DarkRed;
+                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.Clear();
+                            Console.WriteLine(" _________________________________________________________________________ ");
+                            Console.WriteLine("|                                                                         |");
+                            Console.WriteLine("|                         MULTIPLICACION NORMAL                           |");
+                            Console.WriteLine("|_________________________________________________________________________|");
+                            Console.WriteLine("|                                                                         |");
+                            int a2 = 0;
+                            for (int x = i; x <= m; x++)
+                            {
+                                for (int z = j; z <= k; z++)
+                                {
+                                    a2 = x * z;
+                            Console.WriteLine("|                             {0} x {1} = {2}", x, z, a2);
+                                    
+                                }
+                            }
+                            Console.WriteLine("|_________________________________________________________________________|");
+                            Console.WriteLine("                                                                           ");
+                            Console.ReadKey();
                             break;
+
+
                         case 2:
                             //Multiplicación rusa
                             esNumero = false;
                             while (esNumero == false || esNumero2==false )
                             {
                                 Console.WriteLine("                                                                           ");
-                                Console.Write(" ---------------Introduzca el primer número: ");
+                                Console.Write(" --------------- Introduzca el primer número: ");
                                 //nro1 = Convert.ToInt64(Console.ReadLine());
                                 n = Console.ReadLine();
                                 Console.WriteLine("                                                                           ");
-                                Console.Write(" ---------------Introduzca el segundo número: ");
+                                Console.Write(" --------------- Introduzca el segundo número: ");
                                 //nro2 = Convert.ToInt64(Console.ReadLine());
                                 n2 = Console.ReadLine();
                                 Console.WriteLine("                                                                           ");
-                                esNumero = long.TryParse(n, out nro1);
-                                esNumero2= long.TryParse(n2, out nro2);
+                                esNumero = int.TryParse(n, out nro1);
+                                esNumero2= int.TryParse(n2, out nro2);
                             }
                                                        
                             while (nro1 < 0)
@@ -126,8 +190,8 @@ namespace Ejercicio3_DFDaCSharp
                                     //nro2 = Convert.ToInt64(Console.ReadLine());
                                     n2 = Console.ReadLine();
                                     Console.WriteLine("                                                                           ");
-                                    esNumero = long.TryParse(n, out nro1);
-                                    esNumero2 = long.TryParse(n2, out nro2);
+                                    esNumero = int.TryParse(n, out nro1);
+                                    esNumero2 = int.TryParse(n2, out nro2);
                                 }
 
                             }
@@ -180,6 +244,7 @@ namespace Ejercicio3_DFDaCSharp
                             Console.ReadKey();
                             
                             break;
+
                         case 3:
                             //salir
                             Console.BackgroundColor = ConsoleColor.DarkRed;
