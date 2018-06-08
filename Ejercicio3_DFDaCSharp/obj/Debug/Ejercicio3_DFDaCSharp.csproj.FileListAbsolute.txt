@@ -5,3 +5,5 @@ C:\Users\ZM\Documents\GitLab\Ejercicios_CSharp\Ejercicio3_DFDaCSharp\Ejercicio3_
 C:\Users\ZM\Documents\GitLab\Ejercicios_CSharp\Ejercicio3_DFDaCSharp\Ejercicio3_DFDaCSharp\obj\Debug\Ejercicio3_DFDaCSharp.csprojResolveAssemblyReference.cache
 C:\Users\ZM\Documents\GitLab\Ejercicios_CSharp\Ejercicio3_DFDaCSharp\Ejercicio3_DFDaCSharp\obj\Debug\Ejercicio3_DFDaCSharp.exe
 C:\Users\ZM\Documents\GitLab\Ejercicios_CSharp\Ejercicio3_DFDaCSharp\Ejercicio3_DFDaCSharp\obj\Debug\Ejercicio3_DFDaCSharp.pdb
+C:\Users\zbermudez\Documents\GitLab\Ejercicios_CSharp\Ejercicio3_DFDaCSharp\Ejercicio3_DFDaCSharp\obj\Debug\Ejercicio3_DFDaCSharp.exe
+C:\Users\zbermudez\Documents\GitLab\Ejercicios_CSharp\Ejercicio3_DFDaCSharp\Ejercicio3_DFDaCSharp\obj\Debug\Ejercicio3_DFDaCSharp.pdb
